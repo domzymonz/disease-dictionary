@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "components/header.html" %}
+</head>
+
+<body>
+  {% include "components/navbar.html" %}
+  <div id="error-page">
+    <div id="error-container">
+      <span class="heading-1 bold">{{ text["heading"] }}</span>
+      <span class="heading-4 semibold">{{ text["description"] }}</span>
+    </div>
+    {% include "components/form.html" %}
+  </div>
+</body>
+
+</html>

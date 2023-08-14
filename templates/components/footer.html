@@ -1,0 +1,8 @@
+<footer id="footer">
+  <img id='navbar-logo' src='/static/images/footer_image.svg'></img>
+  {% if not form %}
+    {% include 'components/form.html' %}
+  {% elif form["invisible"] == False %}
+    {% include 'components/form.html' %}
+  {% endif %}
+</footer>

@@ -1,0 +1,15 @@
+<nav id='navbar'>
+  <div id='navbar-container'>
+    <a href="/" id="navbar-logo-container">
+      <img id='navbar-logo' src='/static/images/logo.svg'></img>
+    </a>
+    <div id='navbar-links'>
+      <a href="/" class="paragraph high-emphasis semibold">Home</a>
+      {% if not form %}
+        {% include 'components/form.html' %}
+      {% elif form["invisible"] == False %}
+        {% include 'components/form.html' %}
+      {% endif %}
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "components/header.html" %}
+</head>
+
+<body>
+  {% include "components/navbar.html" %}
+  <div id="home">
+    <div id="hero-section">
+      <span id="home-heading" class="heading-1 semibold limit-width">Defining Diseases with Direction</span>
+      <span id="home-description" class="paragraph low-emphasis limit-width">The Disease Dictionary uses Artificial Intelligence to provide general information about common (and even uncommon) diseases!</span>
+      <a href="/search" class="primary-cta semibold">Get Definition</a>
+    </div>
+    <div id="question-section">
+      <div id="question-container">
+        <span id="question-heading" class="heading-3 semibold limit-width">What is the Disease Dictionary?</span>
+        <span id="question-description" class="paragraph low-emphasis limit-width">
+          The Disease Dictionary is a website leveraging AI technology to give users general information about various diseases. This website aims to offer accessible and informative insights into diseases.
+        </span>
+      </div>
+      <div id="question-container">
+        <span id="question-heading" class="heading-3 semibold limit-width">Why do we exist?</span>
+        <span id="question-description" class="paragraph low-emphasis limit-width">
+          There aren't a lot of disease dictionaries. There are even less that are presentable and modern. The Disease Dictionary aims to solve both: face and function using modern technologies!
+        </span>
+      </div>
+    </div>
+  </div>
+  {% include "components/footer.html" %}
+</body>
+
+</html>

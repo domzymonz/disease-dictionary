@@ -1,0 +1,54 @@
+.heading-1 {
+  font-size: 5rem;
+  line-height: 5.35rem;
+}
+
+.heading-2 {
+  font-size: 3.5rem;
+  line-height: 3.85rem;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  line-height: 2.35rem;
+}
+
+.heading-4 {
+  font-size: 1.5rem;
+  line-height: 1.85rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.35rem;
+}
+
+
+
+.medium {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+
+
+.high-emphasis {
+  color: #ffffff;
+}
+
+.low-emphasis {
+  color: #aeaeae;
+}
+
+
+
+.limit-width {
+  max-width: 750px;
+}

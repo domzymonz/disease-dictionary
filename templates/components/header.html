@@ -1,0 +1,10 @@
+<link rel="stylesheet" href='/static/main.css' />
+<link rel="stylesheet" href='/static/text.css' />
+
+<link rel="icon" type="image/x-icon" href="static/images/favicon.svg">
+
+{% if not title %}
+<title>Disease Dictionary</title>
+{% else %}
+<title>{{ title }}</title>
+{% endif %}

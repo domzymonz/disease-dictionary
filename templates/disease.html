@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "components/header.html" %}
+</head>
+
+<body>
+  {% include "components/navbar.html" %}
+  <div id="information">
+    <div id="names">
+      <span class="heading-2 semibold limit-width">{{ result["name"] }}</span>
+      {% if result["alternative_names"] != [] %}
+      <div id="alt-names">
+        <span class="paragraph">also known as</span>
+        {% for name in result["alternative_names"] %}
+        <span class="paragraph alt-name">{{ name }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <span id="overview" class="paragraph limit-width">{{ result["overview"] }}</span>
+    <div class="section-container">
+      <span class="heading-3 medium">Transmission</span>
+      <span id="transmission" class="paragraph limit-width">{{ result["transmission"] }}</span>
+    </div>
+    <div class="section-container">
+      <span class="heading-3 medium">Symptoms</span>
+      <div class="info-container">
+        {% for symptom in result["symptoms"] %}
+        <div data-risk="{{ symptom[2] }}" class="info-point symptom">
+          <span class="info-heading semibold limit-width">{{ symptom[0] }}</span>
+          <span class="info-description paragraph limit-width">{{ symptom[1] }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="section-container">
+      <span class="heading-3 medium">Cures</span>
+      {% if result["cures"] == [] or curable == 0 %}
+        <span class="paragraph limit-width">{{ result["nocure_message"] }}</span>
+      {% else %}
+      <div class="info-container">
+        {% for cure in result["cures"] %}
+        <div class="info-point">
+          <span class="info-heading semibold limit-width">{{ cure[0] }} <span class="badge">{{ cure[2] }}</span></span>
+          <span class="paragraph low-emphasis limit-width">{{ cure[1] }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="section-container">
+      <span class="heading-3 medium">Prevention</span>
+      <div class="info-container">
+        {% for prevention in result["preventions"] %}
+        <div class="info-point">
+          <span class="info-heading semibold limit-width">{{ prevention[0] }}</span>
+          <span class="paragraph low-emphasis limit-width">{{ prevention[1] }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div id="other-info" class="section-container">
+      <span class="heading-3 medium">Further Information</span>
+      {% for info in result["other_info"] %}
+      <div class="subsection-container">
+        <span class="heading-4 medium limit-width">{{ info[0] }}</span>
+        <span class="paragraph low-emphasis limit-width">{{ info[1] }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="section-container">
+      <span class="heading-3 medium">Disclaimer</span>
+      <span class="paragraph limit-width">{{ result["disclaimer"] }}</span>
+    </div>
+  </div>
+  {% include "components/footer.html" %}
+</body>
+
+</html>
