@@ -1,0 +1,22 @@
+{
+  "existing": is the given a disease? if so, input 1, else 0
+  "name": "Disease Name",
+  "alternative_names": ["Alternative 1"],
+  "overview": "Provide here an overview of the disease",
+  "transmission": "Explain in a paragraph how the disease speads/is transmitted",
+  "symptoms": [
+    ["Symptom Name 1", "Provide an overview and explanation of the symptom", "very-low-risk, low-risk, medium-risk, high-risk, very-high-risk"]
+  ],
+  "curable": 1 if the given disease is curable and 0 if not,
+  "nocure_message": "replicate this: There are currently no known cures for given disease.",
+  "cures": [
+    ["Cure Name 1", "Provide an overview and explanation of the cure.", "Percentage of Effectivity 1 (use purely numbers, hyphens, and comparison symbols)"]
+  ],
+  "preventions": [
+    ["Prevention Name 1", "Provide an overview and explanation of the prevention measure."]
+  ],
+  "other_info": [
+    ["Heading", "1 paragraph information"], do not include disclaimers
+  ],
+  "disclaimer": "Replicate this: This information is provided for general informational purposes and is not a substitute for professional medical advice. Individuals with concerns about thegiven disease should consult a qualified healthcare provider. For more accurate and detailed information, please seek guidance from a medical professional."
+}
